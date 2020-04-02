@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+.App *:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.App {
+  /*Text Size Switch*/
+  font-size: calc(0.8vw + 0.6vh);
+
+
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  /*width: 80%;*/
+  height: 100vh;
+  padding: 0 5vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+#timeAxis {
+  position: absolute;
+  top: calc(100vh / 14 - 14px);
+  left: 0;
+  /*width: 5vw;*/
+  font-size: 130%; /*2vw*/
+  font-weight: 100;
+  z-index: 2;
+}
+
+#timeAxis div {
+  height: calc(100vh / 14 + 1px);
+}
+
+
+
+
+/*7 days*/
+.Day {
+  display: inline-grid;
+  width: calc(100% / 7);
+}
+
+.d_title {
+  position: relative;
+  font-size: 130%;
+  font-weight: 100;
+  height: calc(100vh / 14 - 13px);
+  vertical-align: bottom;
+  /*display: flex;*/
+  /*align-items: flex-end;*/
+  /*align-content: space-around;*/
+}
+.d_title div {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+
+.Hour {
+  padding: 0 2px;
+  border-top: 1px solid black;
+  height: calc(100vh / 14 + 1px);
+}
+
+.Hour:hover {
+  z-index: 12;
+}
+
+/*the current day and hour block*/
+.active {
+  z-index: 10;
+  transform: scale(1.1);
+  box-shadow: 0 0 7px white;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+
+
+
+
+.Task {
+  border-radius: 50px;
+  padding: 0.8% 0;
+  margin-top: 0.2em;
+  position: relative;
+
+  /*text-shadow: 100% 100%  black;*/
+}
+
+.Task:hover .t_detail {
+  visibility: visible;
+  transition: visibility 0s;
+  box-shadow: 2px 2px 4px white;
+  z-index: 20;
+}
+.t_detail {
+  font-size: 100%;
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translate(100%, -50%);
+  z-index: 1;
+  width: 100%;
+  padding: 10px 5px;
+  background-color: inherit;
+  color: inherit;
+  border-color: inherit;
+  border-radius: 5px;
+
+  border: 1px solid white;
+  box-shadow: 1px 1px 4px transparent;
+
+  visibility: collapse;
+}
+.t_detail:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.t_detail a {
+  display: block;
+  color: inherit;
+}
+
+.t_title {
+  letter-spacing: 1px;
+  font-size: 110%;
+  font-weight: 500;
+  /***********************************************************/
+}
+
+.t_note {
+
+}
+
+.t_note {
+
+}
+
+.t_time {
+
+}
+
+
+
+/**********file input**********/
+#actionItems {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+#actionItems * {
+  font-size: 70%;
+  display: block;
+}
