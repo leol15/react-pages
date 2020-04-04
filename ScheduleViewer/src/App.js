@@ -25,7 +25,7 @@ class App extends Component {
   }
 
 
-  // todo: figuring out how to read in a file 
+  
   componentDidMount() {
     this.updateTasks();
 
